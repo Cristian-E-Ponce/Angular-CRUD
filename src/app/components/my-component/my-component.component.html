@@ -1,0 +1,26 @@
+<h1>my-component works!</h1>
+<div *ngIf="edad >= 18">
+    <h1>Mayor de Edad</h1>
+</div>
+<div *ngIf="edad < 18">
+    <h1>Menor de Edad</h1>
+</div>      
+
+<h3 [style.background]="edad >= 18 ? 'green':'red' ">
+    Tu Edad es: {{edad}}
+</h3>
+<h2 [style.background]="'blue'">
+    Otro Text
+</h2>
+
+<button (click)="aumentarEdad()">Aumentar Edad</button>
+<button (click)="disminuirEdad()">Disminuir Edad</button>
+
+
+<h3>
+    <ul>
+        <li *ngFor="let nombre of nombres;let indice = index">
+           {{indice + ' - ' + nombre}} 
+        </li>
+    </ul>
+</h3>
